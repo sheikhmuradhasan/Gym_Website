@@ -110,14 +110,14 @@
           <div class="right-section flex-grow-1 p-4">
 
             <!-- Login Form -->
-            <form id="loginForm">
+            <form action="loginAction.php" id="loginForm" method="post">
               <div class="mb-3">
                 <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" required>
+                <input type="email" class="form-control" id="l_email" required>
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" required>
+                <input type="password" class="form-control" id="l_password" required>
               </div>
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="rememberMe">
@@ -136,10 +136,14 @@
 
 
             <!-- Registration Form -->
-            <form id="signupForm" class="d-none">
+            <form action="signupAction" id="signupForm" class="d-none" method="post">
               <div class="mb-3">
                 <label for="signupUsername" class="form-label">Username</label>
                 <input type="text" class="form-control" id="signupUsername" required>
+              </div>
+              <div class="mb-3">
+                <label for="mobileNumber" class="form-label">Mobile Number</label>
+                <input type="tel" class="form-control" id="mobileNumber" required>
               </div>
               <div class="mb-3">
                 <label for="signupEmail" class="form-label">Email Address</label>
