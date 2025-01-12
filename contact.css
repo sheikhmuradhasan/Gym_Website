@@ -1,0 +1,232 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    padding: 10px 20px;
+    z-index: 3;
+    }
+  
+    .nav-img{
+      width: 120px;
+    }
+  
+    .navbar-nav {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 15px 0px;
+      gap: 15px;
+    }
+  
+    .btn-call-now {
+      background-color: #EBD415;
+      color: #000000;
+      padding: 5px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+  
+    .btn-call-now:hover{
+      background-color: #ebd615d2;
+      color: #000000;
+    }
+  
+    .nav-link {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+  
+    .row1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60vh;
+    }
+  
+    /* Hero Section */
+    .hero-section {
+      margin-top: -10vh;
+      background: url('img/about.jpeg') no-repeat center center/cover;
+      color: white;
+      position: relative;
+    }
+  
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.75); 
+      z-index: 1;
+    }
+  
+    .hero-content {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+   /* Services Design */
+   .services-section {
+    background: url('img/services-bg.webp') no-repeat center center/cover;
+    color: #f9f9f9;
+    position: relative;
+    padding: 80px 0;
+  }
+
+  .services-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.services-section .container {
+  position: relative;
+  z-index: 2; /* Ensures content stays above the overlay */
+}
+
+  .services-section .text-danger {
+    color: #EBD415 !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .services-section .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .service-item {
+    background: rgba(255, 255, 255, 0.1); /* Transparent Background */
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .service-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .service-icon {
+    width: 50px;
+    height: auto;
+  }
+
+  .service-title {
+    color: #EBD415;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+  
+  .divider {
+    width: 50px;
+    margin: 10px auto;
+    border: 2px solid #fff;
+  }
+  
+  .service-item p {
+    font-size: 1rem;
+    color: #ddd;
+  }
+
+
+  /* contact from design */
+  .contact-section {
+    background-color: #000000;
+    color: #f9f9f9;
+    position: relative;
+    padding: 80px 0;
+  }
+
+  .contact-section .text-danger {
+    color: #EBD415 !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .contact-section .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .contact-section .form-control {
+    height: 50px;
+    border-radius: 5px;
+  }
+
+  .contact-section .msg-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .contact-section .btn-danger {
+    background-color: #EBD415;
+    color: #000000;
+    padding: 10px 30px;
+    border: none;
+  }
+  
+  .contact-section .btn-danger:hover {
+    background-color: #ebd615b4;
+  }
+  
+
+
+    
+
+
+       /* footer design */
+  .main-footer{
+    padding: 100px 0px 20px 0px;
+    color: white;
+    z-index: 1;
+  }
+  
+  .footer-logo{
+    width: 200px;
+  }
+
+  .footer-heading{
+    color:#EBD415;
+    font-weight: 700;
+  }
+
+  .social-links img{
+    width: 30px;
+  }
+
+  .footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+    /* align-items: center; */
+    list-style: none;
+  }
+
+  .footer-copyright{
+    margin-top: 100px;
+    padding-top: 20px;
+    border-top: 1px solid rgb(255, 255, 255);
+  }
