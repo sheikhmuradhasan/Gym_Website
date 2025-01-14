@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Popup
 
 // // Selecting Elements
-// const registerNowButton = document.getElementById('registerNow');
+// const subscribeButton = document.getElementById('subscribe');
 // const popupModal = document.getElementById('popupModal');
 // const closePopupButton = document.getElementById('closePopup');
 
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Login and Registration with validation 
 // Access elements
-const registerNowButton = document.getElementById("registerNow");
+const subscribeButton = document.getElementById("subscribe");
 const loginForm = document.getElementById("loginForm");
 const signupForm = document.getElementById("signupForm");
 const showLoginFormLink = document.getElementById("showLoginForm");
@@ -188,26 +188,26 @@ signupForm.addEventListener("submit", (event) => {
 
 // Login and Registration without validation
 // Get elements
-// const registerNowButton = document.getElementById('registerNow');
+// const subscribeButton = document.getElementById('subscribe');
 // const loginForm = document.getElementById('loginForm');
 // const signupForm = document.getElementById('signupForm');
 // const showLoginFormLink = document.getElementById('showLoginForm');
 // const showSignupFormLink = document.getElementById('showSignupForm');
 
 // // Event: Show Modal on Button Click
-// registerNowButton.addEventListener('click', () => {
+// subscribeButton.addEventListener('click', () => {
 //     const popupModal = new bootstrap.Modal(document.getElementById('popupModal'));
 //     popupModal.show();
 // });
 
 
 // // Show Popup
-// registerNowButton.addEventListener('click', () => {
+// subscribeButton.addEventListener('click', () => {
 //     popupModal.classList.remove('hidden');
 // });
 
 // Event: Show Modal on Button Click
-registerNowButton.addEventListener("click", () => {
+subscribeButton.addEventListener("click", () => {
   const popupModal = new bootstrap.Modal(document.getElementById("popupModal"));
   popupModal.show();
 });
