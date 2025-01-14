@@ -59,27 +59,30 @@
             </div>
 
             <!-- Right Section -->
-            <div class="right-section flex-grow-1 p-5">
+            <div class="right-section flex-grow-1 p-5 d-flex justify-content-center">
                 <!-- Login Form -->
                 <form action="loginAction.php" id="loginForm" method="post">
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email Address</label>
+                        <h2 class="text-center">Login to your account</h2>
+                    </div>
+                    <div class="mb-3">
+                        <label for="l_email" class="form-label">Email Address</label>
                         <input type="email" class="form-control" id="l_email" required>
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
+                        <label for="l_password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="l_password" required>
                     </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="rememberMe">
                         <label class="form-check-label" for="rememberMe">Remember me</label>
                     </div>
-                    <button type="submit" class="btn btn-primary login-btn w-100">Log In</button>
+                    <button type="submit" class="btn btn-submit login-btn w-100">Log In</button>
 
                     <p class="mt-3 text-center">
                         Don’t have an account?
                         <!-- <button type="button" id="showSignupForm" class="btn popup-login-btn w-100">Sign Up</button> -->
-                        <a href="register.html" id="showSignupForm" class="text-primary">Sign Up</a>
+                        <a href="register.html" id="showSignupForm" class="text-primary text-light">Sign Up</a>
                     </p>
                 </form>
             </div>
