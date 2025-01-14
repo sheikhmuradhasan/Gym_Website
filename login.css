@@ -63,11 +63,30 @@
     }
 
     .login-section .right-section{
-        background-color: #1c1b1b;
+        background-color: #101010;
     }
 
-    .right-section label,p{
+    .right-section h2,label,p{
         color: #d8d8d8;
+    }
+
+    .right-section form{
+      width: 80%;
+    }
+
+    .btn-submit {
+      background-color: #EBD415;
+      color: #000000;
+      padding: 5px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-submit:hover{
+      background-color: #ebd615d2;
+      color: #000000;
     }
 
   
