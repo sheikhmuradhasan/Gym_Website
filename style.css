@@ -182,11 +182,7 @@
     animation: fadeIn 0.5s ease-in-out;
 }
 
-.popup-login-btn{
-  background: #EBD415;
-}
-
-.popup-signup-btn{
+.popup-subscribe-btn{
   background: #EBD415;
 }
 
