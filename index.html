@@ -37,10 +37,10 @@
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Log In</a>
-          </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Log In</a>
+            </li>
             <li class="nav-item">
               <a class="btn btn-call-now" href="tel:+8801771729301">Call Now</a>
             </li>
@@ -50,39 +50,39 @@
     </nav>
 
     <!-- Sidebar -->
-  <div class="sidebar" id="sidebar">
-    <ul class="nav flex-column p-3">
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass m-2"></i>Search</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa-solid fa-house-user m-2"></i>Dashboard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa-solid fa-user m-2"></i>Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa-solid fa-link m-2"></i>Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa-solid fa-link m-2"></i>About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa-solid fa-link m-2"></i>Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa-solid fa-link m-2"></i>Contact Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket m-2"></i>Logout</a>
-      </li>
-    </ul>
-  </div>
-  
-  <!-- Sidebar Toggle Button -->
-  <button class="sidebar-toggle-btn" id="toggleSidebar">&#x2630;</button>
+    <div class="sidebar" id="sidebar">
+      <ul class="nav flex-column p-3">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass m-2"></i>Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-house-user m-2"></i>Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-user m-2"></i>Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-link m-2"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-link m-2"></i>About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-link m-2"></i>Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-link m-2"></i>Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket m-2"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle-btn" id="toggleSidebar">&#x2630;</button>
   </header>
-  
+
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-overlay"></div>
@@ -95,76 +95,38 @@
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium totam rem aperiam
             eaque.
           </p>
-          <button id="registerNow" class="btn btn-book-now">Subscribe</button>
+          <button id="subscribe" class="btn btn-book-now">Subscribe</button>
         </div>
       </div>
   </section>
 
-  <!-- popup for login-registration -->
+
   <div id="popupModal" class="modal fade" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body d-flex">
-          <!-- Left Section -->
+
+          <!-- left section -->
           <div class="left-section d-flex flex-column justify-content-center align-items-center p-4 w-50">
             <img src="img/logo.png" alt="" class="popup-logo">
             <h2 class="popup-heading text-center">Welcome to Iron Warriors Family!</h4>
           </div>
+
           <!-- Right Section -->
           <div class="right-section flex-grow-1 p-4">
-
-            <!-- Login Form -->
-            <form action="loginAction.php" id="loginForm" method="post">
+            <h2 class="mb-3 text-center">Subscribe for the updates!</h2>
+            <form action="subscribeAction.php" id="subscribeForm" method="post">
               <div class="mb-3">
                 <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="l_email" required>
-              </div>
-              <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="l_password" required>
+                <input type="email" class="form-control" id="l_email" placeholder="Enter Your Email Address" required>
               </div>
               <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="rememberMe">
-                <label class="form-check-label" for="rememberMe">Remember me</label>
+                <input type="checkbox" class="form-check-input" id="privacyPolicy">
+                <label class="form-check-label" for="privacyPolicy">I agree to the <a href="#">privacy policy</a></label>
               </div>
-              <button type="submit" class="btn popup-login-btn w-100">Log In</button>
-
-              <p class="mt-3 text-center">
-                Don’t have an account?
-                <!-- <button type="button" id="showSignupForm" class="btn popup-login-btn w-100">Sign Up</button> -->
-                <a href="#" id="showSignupForm" class="text-primary">Sign Up</a>
-              </p>
-            </form>
-
-            <!-- Signup Link -->
-
-
-            <!-- Registration Form -->
-            <form action="signupAction" id="signupForm" class="d-none" method="post">
-              <div class="mb-3">
-                <label for="signupUsername" class="form-label">Username</label>
-                <input type="text" class="form-control" id="signupUsername" required>
-              </div>
-              <div class="mb-3">
-                <label for="mobileNumber" class="form-label">Mobile Number</label>
-                <input type="tel" class="form-control" id="mobileNumber" required>
-              </div>
-              <div class="mb-3">
-                <label for="signupEmail" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="signupEmail" required>
-              </div>
-              <div class="mb-3">
-                <label for="signupPassword" class="form-label">Password</label>
-                <input type="password" class="form-control" id="signupPassword" required>
-              </div>
-              <button type="submit" class="btn popup-signup-btn w-100">Sign Up</button>
-              <p class="mt-3 text-center">
-                Already Have an Account?
-                <a href="#" id="showLoginForm" class="text-primary">Sign In</a>
-              </p>
+              <button type="submit" class="btn popup-subscribe-btn w-100">Subscribe</button>
             </form>
           </div>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
       </div>
     </div>
@@ -230,7 +192,8 @@
             <img src="img/services-1.png" alt="Service Icon" class="mb-3 service-icon">
             <h5 class="service-title">Personal Training</h5>
             <hr class="divider">
-            <p>Get one-on-one guidance from a certified fitness professional to achieve your goals faster and more effectively.</p>
+            <p>Get one-on-one guidance from a certified fitness professional to achieve your goals faster and more
+              effectively.</p>
           </div>
         </div>
 
@@ -240,7 +203,8 @@
             <img src="img/services-1.png" alt="Service Icon" class="mb-3 service-icon">
             <h5 class="service-title">Nutrition Counseling</h5>
             <hr class="divider">
-            <p>Work with a registered dietitian to develop a personalized nutrition plan that supports your fitness goals and overall health.</p>
+            <p>Work with a registered dietitian to develop a personalized nutrition plan that supports your fitness
+              goals and overall health.</p>
           </div>
         </div>
 
@@ -250,7 +214,8 @@
             <img src="img/services-1.png" alt="Service Icon" class="mb-3 service-icon">
             <h5 class="service-title">Group Fitness Classes</h5>
             <hr class="divider">
-            <p>Enjoy a variety of group fitness classes, such as yoga, Pilates, Zumba, spin, and boot camp, led by experienced instructors.</p>
+            <p>Enjoy a variety of group fitness classes, such as yoga, Pilates, Zumba, spin, and boot camp, led by
+              experienced instructors.</p>
           </div>
         </div>
 
@@ -260,7 +225,8 @@
             <img src="img/services-1.png" alt="Service Icon" class="mb-3 service-icon">
             <h5 class="service-title">Fitness Assessments</h5>
             <hr class="divider">
-            <p>Get a comprehensive assessment of your fitness level, including body composition analysis, and strength testing.</p>
+            <p>Get a comprehensive assessment of your fitness level, including body composition analysis, and strength
+              testing.</p>
           </div>
         </div>
       </div>
