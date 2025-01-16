@@ -1,12 +1,12 @@
 <?php
     include 'config.php';
-    $r_username = $_POST['r_username'];
-    $r_pass = $_POST["r_pass"];
-    $r_con_pass = $_POST["r_con_pass"];
-    $r_email = $_POST["r_email"];
-    $r_mobile = $_POST["r_mobile"];
+    $a_username = $_POST['a_username'];
+    $a_pass = $_POST["a_pass"];
+    $a_con_pass = $_POST["a_con_pass"];
+    $a_email = $_POST["a_email"];
+    $a_mobile = $_POST["a_mobile"];
 
-    $insert_query ="INSERT INTO `web`(`Username`, `Password`, `email`, `phone`) VALUES ( '$r_username','$r_pass',   '$r_email','$r_mobile')";
+    $insert_query ="INSERT INTO `admin`(`Username`, `Password`, `email`, `phone`) VALUES ( '$a_username','$a_pass','$a_email','$a_mobile')";
 
     if(!mysqli_query($conn,$insert_query)){
         die("not inserted!!");
