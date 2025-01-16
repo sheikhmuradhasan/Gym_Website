@@ -1,14 +1,14 @@
 <?php
 
-if(isset($_POST['loginForm'])){
+if(isset($_POST['adminLoginForm'])){
     include 'config.php';
-    $l_email = $_POST['l_email'];
-    $l_password = $_POST['l_password']
+    $a_email = $_POST['a_email'];
+    $a_password = $_POST['a_password']
 
-    $result = mysqli_query($conn,"SELECT * FROM `web` WHERE username='$l_username' And Password='$l_pass'");
+    $result = mysqli_query($conn,"SELECT * FROM `admin` WHERE username='$a_username' And password='$a_pass'");
 
     if(mysqli_num_rows($result)>0){
-        $_SESSION['username']=$l_username;
+        $_SESSION['username']=$a_username;
         echo "<script>location.href='index.html'</script>";
     }
 
