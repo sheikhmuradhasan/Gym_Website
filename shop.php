@@ -43,7 +43,11 @@ $result = mysqli_query($conn, $query);
                 </div>
             <?php endwhile; ?>
         </div>
-        <a href="userAccount.php" class="btn btn-primary w-100 mt-2 mb-2">Back to profile</a>
+        <div class="card-footer d-flex text-center ">
+            <a href="cart.php" class="btn btn-primary w-50 m-2">View Cart</a>
+            <a href="userAccount.php" class="btn btn-primary w-50 m-2">Back to profile</a>
+        </div>
+        
     </div>
 </body>
 </html>
