@@ -47,7 +47,7 @@ $result = mysqli_query($conn, $query);
                             <td><?php echo htmlspecialchars($row['name']); ?></td>
                             <td>$<?php echo htmlspecialchars($row['price']); ?></td>                            
                             <td>
-                                <form action="removeFromCart.php" method="post">
+                                <form action="deleteCart.php" method="post">
                                     <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($row['product_id']); ?>">
                                     <button type="submit" class="btn btn-danger">Remove</button>
                                 </form>
@@ -59,7 +59,11 @@ $result = mysqli_query($conn, $query);
         <?php else: ?>
             <p class="text-center mt-4">Your cart is empty.</p>
         <?php endif; ?>
-        <a href="userAccount.php" class="btn btn-primary w-100 mt-2 mb-2">Back to profile</a>
+        <div class="card-footer d-flex text-center ">
+            <a href="shop.php" class="btn btn-primary w-100 m-2">Back to shop</a>
+            <a href="userAccount.php" class="btn btn-primary w-100 m-2">Back to profile</a>
+        </div>
+        
     </div>
     
 </body>
