@@ -10,9 +10,9 @@ if(!isset($_SESSION['user_id'])){
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $user_id = $_SESSION['user_id'];
-    $product_id = $_SESSION['product_id'];
+    $product_id = $_POST['product_id'];
 
-    $deleteQuery = "DELETE FROM `cart` WHERE user_id = '$user_id' AND product_id = '$product_id'";
+    $deleteQuery = "DELETE FROM cart WHERE user_id = '$user_id' AND product_id = '$product_id'";
 
     if(mysqli_query($conn, $deleteQuery)){
         echo "<script>alert('Product deleted successfully from cart!!')</script>;";
