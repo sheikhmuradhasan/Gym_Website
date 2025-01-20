@@ -69,28 +69,28 @@
                 </div>
                     <div class="mb-3">
                         <label for="a_username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="a_username" required>
+                        <input type="text" class="form-control" id="a_username" name="a_username" required>
                     </div>
                     <div class="mb-3">
                         <label for="a_mobile" class="form-label">Mobile Number</label>
-                        <input type="tel" class="form-control" id="a_mobile" required>
+                        <input type="tel" class="form-control" id="a_mobile" name="a_mobile" required>
                     </div>
                     <div class="mb-3">
                         <label for="a_email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="a_email" required>
+                        <input type="email" class="form-control" id="a_email" name="a_email" required>
                     </div>
                     <div class="mb-3">
-                        <label for="a_password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="a_password" required>
+                        <label for="a_pass" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="a_pass" name="a_pass" required>
                     </div>
                     <div class="mb-3">
                         <label for="a_con_pass" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="a_con_pass" required>
+                        <input type="password" class="form-control" id="a_con_pass" name="a_con_pass" required>
                     </div>
                     <button type="submit" class="btn btn-submit w-100">Sign Up</button>
                     <p class="mt-3 text-center">
                         Already Have an Account?
-                        <a href="adminLogin.html" id="showLoginForm" class="text-primary text-light">Sign In</a>
+                        <a href="adminLogin.php" id="showLoginForm" class="text-primary text-light">Sign In</a>
                     </p>
                 </form>
     

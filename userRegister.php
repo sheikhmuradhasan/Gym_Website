@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="register.css">
 </head>
 
 <body>
@@ -47,8 +50,8 @@
     </header>
 
 
-    <section class="login-section d-flex flex-row align-items-center justify-content-center">
-        <div class="container d-flex flex-row">
+    <section class="register-section d-flex flex-row align-items-center justify-content-center">
+        <div class="container d-flex flex-row mt-5">
 
             <!-- Left Section -->
             <div class="left-section d-flex flex-column justify-content-center align-items-center p-4 w-50">
@@ -60,39 +63,44 @@
 
             <!-- Right Section -->
             <div class="right-section flex-grow-1 p-5 d-flex justify-content-center">
-                <!-- Login Form -->
-                <form action="loginAction.php" id="adminLoginForm" method="post">
+                <form action="userSignupAction.php" id="signupForm" method="post">
+                    <div class="mb-3 pt-5">
+                    <h2 class="text-center">Create A New Account</h2>
+                </div>
                     <div class="mb-3">
-                        <h2 class="text-center">Login to your account</h2>
+                        <label for="u_username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="u_username" name="u_username" required>
                     </div>
                     <div class="mb-3">
-                        <label for="a_email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="a_email" required>
+                        <label for="u_mobile" class="form-label">Mobile Number</label>
+                        <input type="tel" class="form-control" id="u_mobile" name="u_mobile" required>
                     </div>
                     <div class="mb-3">
-                        <label for="a_password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="a_password" required>
+                        <label for="u_email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="u_email" name="u_email" required>
                     </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="rememberMe">
-                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                    <div class="mb-3">
+                        <label for="u_pass" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="u_pass" name="u_pass" required>
                     </div>
-                    <button type="submit" class="btn btn-submit login-btn w-100">Log In</button>
-
+                    <div class="mb-3">
+                        <label for="u_con_pass" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="u_con_pass" name="u_con_pass" required>
+                    </div>
+                    <button type="submit" class="btn btn-submit w-100">Sign Up</button>
                     <p class="mt-3 text-center">
-                        Don’t have an account?
-                        <!-- <button type="button" id="showSignupForm" class="btn popup-login-btn w-100">Sign Up</button> -->
-                        <a href="adminRegister.html" id="showSignupForm" class="text-primary text-light">Sign Up</a>
+                        Already Have an Account?
+                        <a href="userLogin.php" id="showLoginForm" class="text-primary text-light">Sign In</a>
                     </p>
-                </form>
+                </form>    
             </div>
         </div>
     </section>
 
 
     <!-- Footer Section -->
-    <footer class="bg-black main-footer">
-        <div class="container">
+    <footer class="bg-black main-footer ">
+        <div class="container pt-5">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-3">
                     <img class="footer-logo" src="img/logo.png" alt="">

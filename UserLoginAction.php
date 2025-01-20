@@ -1,11 +1,11 @@
 <?php
 
-if(isset($_POST['adminLoginForm'])){
+if(isset($_POST['userLoginForm'])){
     include 'config.php';
-    $a_useremail = $_POST['a_useremail'];
-    $a_password = $_POST['a_pass'];
+    $u_useremail = $_POST['u_useremail'];
+    $u_password = $_POST['u_pass'];
     
-    $result = mysqli_query($conn, "SELECT * FROM `admin` WHERE (email='$a_useremail' OR username='$a_useremail') AND password='$a_password'");
+    $result = mysqli_query($conn, "SELECT * FROM `user` WHERE (email='$u_useremail' OR username='$u_useremail') AND password='$u_password'");
 
     if(mysqli_num_rows($result)>0){
         $row = mysqli_fetch_assoc($result);
@@ -20,7 +20,7 @@ if(isset($_POST['adminLoginForm'])){
 
     else{
         echo "<script>alert('Invalid email or password')</script>";
-        echo "<script>location.href='adminRegister.html'</script>";
+        echo "<script>location.href='userRegister.php'</script>";
     }
 
 }

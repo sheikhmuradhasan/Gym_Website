@@ -32,17 +32,17 @@
               <a class="nav-link" href="services.html">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="shop.html">Shop</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blogs</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.php">Profile</a>
+            </li>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="adminLogin.html">Log In</a>
+              <a class="nav-link" href="http://localhost/Gym_Website/adminLogin.php">Admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost/Gym_Website/userLogin.php">User</a>
             </li>
             <li class="nav-item">
               <a class="btn btn-call-now" href="tel:+8801771729301">Call Now</a>
@@ -98,7 +98,10 @@
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium totam rem aperiam
             eaque.
           </p>
-          <button id="subscribe" class="btn btn-book-now">Subscribe</button>
+          <button id="subscribe" class="btn btn-book-now" data-bs-toggle="modal" data-bs-target="#popupModal">
+            Subscribe
+          </button>
+          
         </div>
       </div>
   </section>
@@ -125,7 +128,7 @@
               </div>
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="privacyPolicy">
-                <label class="form-check-label" for="privacyPolicy">I agree to the <a href="#">privacy policy</a></label>
+                <label class="form-check-label" for="privacyPolicy">I agree to the <a href="#" class="text-light">privacy policy</a></label>
               </div>
               <button type="submit" class="btn popup-subscribe-btn w-100">Subscribe</button>
             </form>
