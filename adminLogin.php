@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['username'])){
+if (isset($_SESSION['username'])) {
     echo "<script>alert('You are already logged in!')</script>";
     echo "<script>location.href='index.html'</script>";
 }
@@ -8,6 +8,7 @@ if(isset($_SESSION['username'])){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,7 +69,7 @@ if(isset($_SESSION['username'])){
             <!-- Right Section -->
             <div class="right-section flex-grow-1 p-5 d-flex justify-content-center">
                 <!-- Login Form -->
-                <form action="loginAction.php" method="post">
+                <form action="loginAction.php" id="loginForm" method="post">
                     <div class="mb-3">
                         <h2 class="text-center">Login to your account</h2>
                     </div>
@@ -91,7 +92,6 @@ if(isset($_SESSION['username'])){
             </div>
         </div>
     </section>
-
 
     <!-- Footer Section -->
     <footer class="bg-black main-footer">
@@ -187,9 +187,44 @@ if(isset($_SESSION['username'])){
         </div>
     </footer>
 
+    <!-- Validation -->
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+
+            const userEmailOrUsername = document.getElementById("a_useremail").value.trim();
+            const password = document.getElementById("a_pass").value.trim();
+
+
+            const emailRegex = /^(faculty)_\d{5}@lus\.ac\.bd$/;
+            const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.{6,})/;
+
+            let isValid = true;
+            let errorMessage = "";
+
+            if (!emailRegex.test(userEmailOrUsername) && !usernameRegex.test(userEmailOrUsername)) {
+                errorMessage += "Enter a valid email (faculty_XXXXX@lus.ac.bd) or a username (3-20 characters).\n";
+                isValid = false;
+            }
+
+            if (!passwordRegex.test(password)) {
+                errorMessage += "Password must be at least 6 characters long, contain one uppercase letter, one lowercase letter, and one special character.\n";
+                isValid = false;
+            }
+
+            if (password === "") {
+                errorMessage += "Password cannot be empty.\n";
+                isValid = false;
+            }
+
+            if (!isValid) {
+                e.preventDefault(); 
+                alert(errorMessage); 
+            }
+        });
+    </script>
 
     <script src="https://kit.fontawesome.com/01ed6ce9ad.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
