@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,8 +62,8 @@
             <div class="right-section flex-grow-1 p-5 d-flex justify-content-center">
                 <form action="userSignupAction.php" id="signupForm" method="post">
                     <div class="mb-3 pt-5">
-                    <h2 class="text-center">Create A New Account</h2>
-                </div>
+                        <h2 class="text-center">Create A New Account</h2>
+                    </div>
                     <div class="mb-3">
                         <label for="u_username" class="form-label">Username</label>
                         <input type="text" class="form-control" id="u_username" name="u_username" required>
@@ -92,7 +89,7 @@
                         Already Have an Account?
                         <a href="userLogin.php" id="showLoginForm" class="text-primary text-light">Sign In</a>
                     </p>
-                </form>    
+                </form>
             </div>
         </div>
     </section>
@@ -192,6 +189,59 @@
         </div>
     </footer>
 
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function (e) {
+            e.preventDefault(); 
+
+            const username = document.getElementById("u_username").value.trim();
+            const mobile = document.getElementById("u_mobile").value.trim();
+            const email = document.getElementById("u_email").value.trim();
+            const password = document.getElementById("u_pass").value.trim();
+            const confirmPassword = document.getElementById("u_con_pass").value.trim();
+
+            const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
+            const mobileRegex = /(\+88)?-?01[3-9]\d{8}/; 
+            const emailRegex = /(cse|eee)_\d{10}@lus\.ac\.bd/;
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.{6,})/; 
+
+            let isValid = true;
+            let errorMessage = "";
+
+            if (!usernameRegex.test(username)) {
+                errorMessage += "Invalid username. Enter a valid username with (3-20 characters)\n";
+                isValid = false;
+            }
+
+            if (!mobileRegex.test(mobile)) {
+                errorMessage += "Invalid mobile number. Format: (+88)-01XXXXXXXXX.\n";
+                isValid = false;
+            }
+
+            if (!emailRegex.test(email)) {
+                errorMessage += "Invalid email. Format: cse|eee_XXXXXXXXXX@lus.ac.bd.\n";
+                isValid = false;
+            }
+
+            if (!passwordRegex.test(password)) {
+                errorMessage +=
+                    "Password must be at least 6 characters long, contain one uppercase letter, one lowercase letter, and one special character.\n";
+                isValid = false;
+            }
+
+            if (password !== confirmPassword) {
+                errorMessage += "Passwords do not match.\n";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Form submitted successfully!");
+                this.submit();
+            } else {
+                alert(errorMessage);
+            }
+        });
+    </script>
 
     <script src="https://kit.fontawesome.com/01ed6ce9ad.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
