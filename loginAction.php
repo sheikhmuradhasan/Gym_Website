@@ -20,8 +20,12 @@ if(isset($_POST['adminLoginForm'])){
 
     else{
         echo "<script>alert('Invalid email or password')</script>";
-        echo "<script>location.href='adminRegister.html'</script>";
+        echo "<script>location.href='adminLogin.php'</script>";
     }
 
 }
+else{
+    echo "<script>alert('Form not submission Failed!!')</script>";
+}
+
 ?> 
