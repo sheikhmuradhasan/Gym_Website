@@ -103,76 +103,76 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// Login and Registration with validation 
-// Access elements
-const subscribeButton = document.getElementById("subscribe");
-const loginForm = document.getElementById("loginForm");
-const signupForm = document.getElementById("signupForm");
-const showLoginFormLink = document.getElementById("showLoginForm");
-const showSignupFormLink = document.getElementById("showSignupForm");
+// // Login and Registration with validation 
+// // Access elements
+// const subscribeButton = document.getElementById("subscribe");
+// const loginForm = document.getElementById("loginForm");
+// const signupForm = document.getElementById("signupForm");
+// const showLoginFormLink = document.getElementById("showLoginForm");
+// const showSignupFormLink = document.getElementById("showSignupForm");
 
-// Validation regex patterns
-const regexPatterns = {
-  username: /^([a-z0-9]+)$/,
-  email: /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z_\-\.]+)\.([a-zA-Z]{2,})$/,
-  password: /^(?=.*[0-9])(?=.*[A-Z])(?=.*[@$!#%&?*&])[A-Za-z\d@$!#%&?*&]{8,20}$/,
-};
+// // Validation regex patterns
+// const regexPatterns = {
+//   username: /^([a-z0-9]+)$/,
+//   email: /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z_\-\.]+)\.([a-zA-Z]{2,})$/,
+//   password: /^(?=.*[0-9])(?=.*[A-Z])(?=.*[@$!#%&?*&])[A-Za-z\d@$!#%&?*&]{8,20}$/,
+// };
 
-// Function to validate input
-function validateInput(value, regex) {
-  return regex.test(value);
-}
+// // Function to validate input
+// function validateInput(value, regex) {
+//   return regex.test(value);
+// }
 
-// Validate Login Form
-loginForm.addEventListener("submit", (event) => {
-  event.preventDefault();
+// // Validate Login Form
+// loginForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
 
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+//   const email = document.getElementById("email").value;
+//   const password = document.getElementById("password").value;
 
-  if (!validateInput(email, regexPatterns.email)) {
-    alert("Invalid email. Please use a valid email format.");
-    return;
-  }
+//   if (!validateInput(email, regexPatterns.email)) {
+//     alert("Invalid email. Please use a valid email format.");
+//     return;
+//   }
 
-  if (!validateInput(password, regexPatterns.password)) {
-    alert(
-      "Invalid password. It must contain at least one uppercase letter, one number, one special character, and be 8-20 characters long."
-    );
-    return;
-  }
+//   if (!validateInput(password, regexPatterns.password)) {
+//     alert(
+//       "Invalid password. It must contain at least one uppercase letter, one number, one special character, and be 8-20 characters long."
+//     );
+//     return;
+//   }
 
-  alert("Login successful!");
-});
+//   alert("Login successful!");
+// });
 
-// Validate Signup Form
-signupForm.addEventListener("submit", (event) => {
-  event.preventDefault();
+// // Validate Signup Form
+// signupForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
 
-  const signupUsername = document.getElementById("signupUsername").value;
-  const signupEmail = document.getElementById("signupEmail").value;
-  const signupPassword = document.getElementById("signupPassword").value;
+//   const signupUsername = document.getElementById("signupUsername").value;
+//   const signupEmail = document.getElementById("signupEmail").value;
+//   const signupPassword = document.getElementById("signupPassword").value;
 
-  // Validate inputs
-  if (!validateInput(signupUsername, regexPatterns.username)) {
-    alert("Invalid username. It must be lowercase and contain only letters and numbers.");
-    return;
-  }
+//   // Validate inputs
+//   if (!validateInput(signupUsername, regexPatterns.username)) {
+//     alert("Invalid username. It must be lowercase and contain only letters and numbers.");
+//     return;
+//   }
 
-  if (!validateInput(signupEmail, regexPatterns.email)) {
-    alert("Invalid email format. Please use a valid email format.");
-    return;
-  }
+//   if (!validateInput(signupEmail, regexPatterns.email)) {
+//     alert("Invalid email format. Please use a valid email format.");
+//     return;
+//   }
 
-  if (!validateInput(signupPassword, regexPatterns.password)) {
-    alert(
-      "Invalid password. It must contain at least one uppercase letter, one number, one special character, and be 8-20 characters long."
-    );
-    return;
-  }
+//   if (!validateInput(signupPassword, regexPatterns.password)) {
+//     alert(
+//       "Invalid password. It must contain at least one uppercase letter, one number, one special character, and be 8-20 characters long."
+//     );
+//     return;
+//   }
 
-  alert("Signup successful!");
-});
+//   alert("Signup successful!");
+// });
 
 // // Hide Popup
 // closePopupButton.addEventListener('click', () => {
