@@ -68,7 +68,7 @@ if(isset($_SESSION['username'])){
             <!-- Right Section -->
             <div class="right-section flex-grow-1 p-5 d-flex justify-content-center">
                 <!-- Login Form -->
-                <form action="UserLoginAction.php" method="post">
+                <form action="UserLoginAction.php" id="loginForm" method="post">
                     <div class="mb-3">
                         <h2 class="text-center">Login to your account</h2>
                     </div>
@@ -186,6 +186,43 @@ if(isset($_SESSION['username'])){
             </div>
         </div>
     </footer>
+
+    <!-- Validation -->
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+
+            const userEmailOrUsername = document.getElementById("u_useremail").value.trim();
+            const password = document.getElementById("u_pass").value.trim();
+
+
+            const emailRegex = /^(cse|eee)_\d{10}@lus\.ac\.bd$/;
+            const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.{6,})/;
+
+            let isValid = true;
+            let errorMessage = "";
+
+            if (!emailRegex.test(userEmailOrUsername) && !usernameRegex.test(userEmailOrUsername)) {
+                errorMessage += "Enter a valid email (cse|eee_XXXXXXXXXX@lus.ac.bd) or a username (3-20 characters).\n";
+                isValid = false;
+            }
+
+            if (!passwordRegex.test(password)) {
+                errorMessage += "Password must be at least 6 characters long, contain one uppercase letter, one lowercase letter, and one special character.\n";
+                isValid = false;
+            }
+
+            if (password === "") {
+                errorMessage += "Password cannot be empty.\n";
+                isValid = false;
+            }
+
+            if (!isValid) {
+                e.preventDefault(); 
+                alert(errorMessage); 
+            }
+        });
+    </script>
 
 
     <script src="https://kit.fontawesome.com/01ed6ce9ad.js" crossorigin="anonymous"></script>
