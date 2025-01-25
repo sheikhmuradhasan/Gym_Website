@@ -41,8 +41,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `email`, `mobile`, `password`, `role`) VALUES
-(5, 'abc', 'abc@abc.com', '01771729301', 'Abc@123', 'admin'),
-(7, 'newfaculty', 'faculty_00001@lus.ac.bd', '+8801924816362', 'Faculty@123', 'admin');
+
 
 -- --------------------------------------------------------
 
@@ -118,7 +117,6 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `email`, `mobile`, `password`, `role`) VALUES
-(3, 'murad', 'cse_2132020075@lus.ac.bd', '+8801771729301', 'Murad@123', 'user');
 
 --
 -- Indexes for dumped tables
